@@ -1,0 +1,12 @@
+div(class='basics')
+  div(class='table padding-bottom-container-2')
+    div(class='main')
+      hr(class='hr-big')
+      span(class='name-container')
+        div(class='name')
+          span(class='first-name')=resume.basics.firstName
+          span(class='last-name')=resume.basics.lastName
+        span(class='title')=resume.basics.title
+      hr(class='hr-small')
+  if resume.basics.summary
+    div(class='summary markdown padding-container-2')!=helper.mdToHtml(resume.basics.summary)
